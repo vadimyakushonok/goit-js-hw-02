@@ -1,14 +1,18 @@
-let input;
-const numbers = [];
-let total = 0;
+const totalInput = function(input) {
+    const numbers = [];
+    
+    do {
+        input = prompt('Введи число');
+        numbers.push(input);
+    } while(input !== null);
 
-do {
-    input = prompt('Введи число');
-    total += Number(input);
-} while(input !== null);
+    let total = 0;
+    for (let number of numbers) {
+        total += Number(number);
+    }
 
-alert(`Общая сумма чисел равна ${total}`);
-
-for (let number of numbers) {
-    sum += n
+    return `Общая сумма чисел равна ${total}`;
 }
+
+console.log(totalInput());
+console.log(totalInput());
